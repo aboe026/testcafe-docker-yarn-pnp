@@ -6,6 +6,7 @@
     "build": "tsc --build",
     "start": "testcafe --config-file=.testcaferc.json",
     "start-docker": "docker run --rm -v $PROJECT_CWD:/app -w /app -it testcafe/testcafe:2.1.0 chromium build/tests --config-file=.testcaferc.json",
+    "start-docker-workaround": "docker run --rm -v $PROJECT_CWD:/app -w /app -it testcafe/testcafe:yarn-pnp chromium build/tests --config-file=.testcaferc.json",
     "watch": "tsc --build --watch"
   },
   "dependencies": {

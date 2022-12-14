@@ -30,3 +30,11 @@ Repository with minimal setup to show testcafe docker image not working with yar
    ```
 
 **Note**: The test run just fine not in docker by running the command `yarn start`
+
+## Workaround
+
+1. Install dependencies: `yarn install`
+2. Compile the typescript into javascript: `yarn build`
+3. Build the docker image that contains the workaround: `docker build -t testcafe/testcafe:yarn-pnp .`
+4. Run testcafe tests: `yarn start-docker-workaround`
+5. Observe that the tests complete successfully
