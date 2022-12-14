@@ -1,0 +1,20 @@
+{
+  "name": "testcafe-docker-yarn-pnp",
+  "version": "0.1.0",
+  "author": "Adam Boe",
+  "scripts": {
+    "build": "tsc --build",
+    "start": "testcafe --config-file=.testcaferc.json",
+    "start-docker": "docker run --rm -v $PROJECT_CWD:/app -w /app -it testcafe/testcafe:2.1.0 chromium build/tests --config-file=.testcaferc.json",
+    "watch": "tsc --build --watch"
+  },
+  "dependencies": {
+    "node-fetch": "2.6.7",
+    "testcafe": "2.1.0"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "2.6.2",
+    "typescript": "4.8.3"
+  },
+  "packageManager": "yarn@3.3.0"
+}
